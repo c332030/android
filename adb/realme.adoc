@@ -1,0 +1,38 @@
+
+= realme disable app
+
+[source,shell script]
+----
+@echo off
+
+title 停用真我GT应用 by c332030
+
+:: 启用
+:: set command=adb shell pm enable
+:: 停用
+set command=adb shell pm disable-user
+
+:: 乐划锁屏
+%command% com.heytap.pictorial
+
+:: 音乐
+%command% com.heytap.music
+
+:: 小布
+%command% com.heytap.speechassist
+
+:: 浏览器
+%command% com.heytap.browser
+
+:: 视频
+%command% com.heytap.yoli
+
+:: 图库
+%command% com.coloros.gallery3d
+
+:: 快应用
+%command% com.nearme.instant.platform
+
+pause >nul
+
+----

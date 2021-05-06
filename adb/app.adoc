@@ -1,0 +1,23 @@
+
+= adb app
+
+查询应用包名
+
+[source,shell script]
+----
+adb shell pm list packages -s
+----
+
+启用应用
+
+[source,shell script]
+----
+adb shell pm enable 包名
+----
+
+停用应用
+
+[source,shell script]
+----
+adb shell pm disable-user 包名
+----
