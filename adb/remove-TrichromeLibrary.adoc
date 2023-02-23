@@ -9,8 +9,9 @@ adb shell
 trichromelibrary=com.google.android.trichromelibrary
 for version in $(dumpsys package | grep name:${trichromelibrary} | cut -d : -f 3)
 do
-  echo "${trichromelibrary}_${version}"
-  pm uninstall "${trichromelibrary}_${version}"
+  package_name=${trichromelibrary}_${version}
+  echo ${package_name}
+  pm uninstall ${package_name}
 done
 
 ----
