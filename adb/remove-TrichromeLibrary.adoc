@@ -1,0 +1,14 @@
+
+= remove-TrichromeLibrary
+
+[source,shell]
+
+----
+trichromelibrary=com.google.android.trichromelibrary
+for version in $(dumpsys package | grep name:${trichromelibrary} | cut -d : -f 3)
+do
+  echo "version: ${version}"
+  pm uninstall "${trichromelibrary}_${version}"
+done
+
+----
