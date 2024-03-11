@@ -1,0 +1,12 @@
+
+= Operate
+
+[source,shell]
+----
+
+# 模拟屏幕点击
+adb shell input tap x y
+
+# 获取屏幕分辨率
+adb shell wm size
+----
